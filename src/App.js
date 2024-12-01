@@ -1,17 +1,14 @@
-import * as React from 'react';
-import './index.css'
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import LocationMap from './pages/LocationMap';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-/* import Main from './pages/Main';
-import MakeClub from './pages/MakeClub'; */
+import LocationMap from './pages/LocationMap';
 
-function App() {
+const App=()=> {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="locationmap" element={<LocationMap/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path='/locationmap' element={<LocationMap/>}/>
       </Routes>
     </BrowserRouter>
   );
