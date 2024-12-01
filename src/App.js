@@ -1,11 +1,19 @@
-import background from './assets/cctvlocation_image_Designer.jpeg';
+import * as React from 'react';
+import './index.css'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import LocationMap from './pages/LocationMap';
+import Home from './pages/Home';
+/* import Main from './pages/Main';
+import MakeClub from './pages/MakeClub'; */
 
 function App() {
   return (
-    <div className="App">
-      <img src={background} className="background" alt="background" />
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="locationmap" element={<LocationMap/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
